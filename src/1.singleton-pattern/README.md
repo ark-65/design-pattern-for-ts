@@ -8,7 +8,7 @@
 
 皇帝每天要上朝接待臣子、处理政务，陈梓每天要叩拜皇帝，皇帝智能有一个，也就是一个类只能产生一个对象，该怎么实现呢？对象产生是通过 new 关键字完成的（当然也有其他方式，比如对象复制`clone`、反射`eval`）,这个怎么控制呀，但是大家别忘记了构造函数，使用new关键字创建对象时，都会根据输入的参数调用相应的构造函数，如果我们把构造函数设置为private私有访问权限币就可以禁止外埠创建对象了吗？臣子叩拜唯一皇帝的过程类图如图所示。
 
-![image-20220731215036146](C:\Users\liuwu\AppData\Roaming\Typora\typora-user-images\image-20220731215036146.png)
+![1](src/assets/singleton-pattern/1.png)
 
 只有两个类， `Emperor` 代表皇帝类, `Minister` 代表臣子类，关联到皇帝类非常简单
 
@@ -72,7 +72,7 @@ Ensure a class has only one instance, and provide a global point of access to it
 
 单例模式的通用类图
 
-![image-20220731224955124](C:\Users\liuwu\AppData\Roaming\Typora\typora-user-images\image-20220731224955124.png)
+![2](src/assets/singleton-pattern/2.png)
 
 Singleton 类称为单例类，通过使用 private 的构造函数确保了在一个应用中只产生一个实例，并且是自行实例化的 （在 Singleton 中自己使用 new Singleton()）。单例模式的通用源码如下
 
@@ -284,8 +284,11 @@ const minister3 = new Minister('赵四');
 minister1.formalVisit();
 minister3.formalVisit();
 minister2.formalVisit();
+```
 
-// 结果
+- 结果
+
+```shell
 臣 王钢蛋,拜见陛下,吾皇万岁万岁万万岁
 爱卿平身
 你是朕见过的第1个臣子
@@ -295,6 +298,7 @@ minister2.formalVisit();
 臣 张铁锤,拜见陛下,吾皇万岁万岁万万岁
 爱卿平身
 你是朕见过的第3个臣子
+
 ```
 
 
