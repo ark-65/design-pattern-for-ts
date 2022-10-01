@@ -18,7 +18,7 @@
 
 
 
-![image-20220813225032341](C:\Users\liuwu\AppData\Roaming\Typora\typora-user-images\image-20220813225032341.png)
+![image-20221001165236849](../assets/factory-method-pattern/1.png)
 
 
 
@@ -165,7 +165,7 @@ NvWa.main();
 
 工厂方法模式使用的频率非常高，在我们日常的开发中总能见到它的身影。其定义为：**Define an interface for creating an object, bug let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses** （定义一个用于创建对象的接口，让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类。）
 
-![image-20220807222127821](C:\Users\liuwu\AppData\Roaming\Typora\typora-user-images\image-20220807222127821.png)
+![image-20221001165323123](../assets/factory-method-pattern/2.png)
 
  
 
@@ -262,7 +262,7 @@ class Client {
 
 我们这样考虑一个问题：一个模块仅需要一个工厂类，没有必要把它产生出来，使用静态的方法就可以了，根据这一要求，我们把上例中 `AbstatctHumanFactory` 修改一下，类图如下：
 
-![image-20220813230235411](C:\Users\liuwu\AppData\Roaming\Typora\typora-user-images\image-20220813230235411.png)
+![image-20221001165347533](../assets/factory-method-pattern/3.png)
 
 我们在类图中去掉了 `AbstractHumanFactory ` 抽象类,同时把 `chreateHuman` 方法设置为静态类型，简化了类的创建过程，变更的源码仅仅是 `HumanFactory` 和 `NvWa` 类， `HumanFactory` 如下：
 
@@ -314,7 +314,7 @@ NvWa.main();
 
 考虑到需要结构清晰，我们就为每个产品定义一个创造者，然后由调用者自己选择与哪个工厂方法关联。我们还是以女娲造人为例，每个人中都有一个固定的八卦炉，分别造出黑色人种、白色人种、黄色人种，修改后的类图如下：
 
-![image-20220813231415469](C:\Users\liuwu\AppData\Roaming\Typora\typora-user-images\image-20220813231415469.png)
+![image-20221001165417317](../assets/factory-method-pattern/4.png)
 
 每个人种（具体的产品类）都对应了一个创建者，每个创建者都独立负责创建对应的产品对象，非常符合单一职责原则，按照这种模式我们来看看代码变化。
 
@@ -417,7 +417,7 @@ NvWa.main();
 
 当然，在复杂的应用中一般采用多工厂的方法，然后再增加一个协调类，避免调用者与各个子工厂交流，协调类的作用是封装子工厂，对高层模块提供统一的访问接口。
 
-### 
+
 
 ## 小结
 
