@@ -7,13 +7,13 @@ namespace Part5Index {
 
   abstract class Builder {
     // 设置产品不同的部分，以获得不同的产品
-    abstract setPart(): void
+    abstract setPart(): void;
     // 建造产品
-    abstract buildProduct(): Product
+    abstract buildProduct(): Product;
   }
 
   class ConcreteBuilder extends Builder {
-    private product = new Product()
+    private product = new Product();
     // 设置产品零件
     setPart(): void {
       /*
@@ -22,19 +22,19 @@ namespace Part5Index {
     }
 
     buildProduct(): Product {
-      return this.product
+      return this.product;
     }
   }
 
   class Director {
-    private builder = new ConcreteBuilder()
+    private builder = new ConcreteBuilder();
     // 构建不同的产品
     getAProduct() {
-      this.builder.setPart()
+      this.builder.setPart();
       /**
        * 设置不同的零件，产生不同的产品
        */
-      return this.builder.buildProduct()
+      return this.builder.buildProduct();
     }
   }
 }
