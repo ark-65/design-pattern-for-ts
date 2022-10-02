@@ -1,48 +1,47 @@
 class Emperor {
-    private static emperor: Emperor;
-    private count: number = 0;
-    private constructor() {
+  private static emperor: Emperor
+  private count: number = 0
+  private constructor() {}
+  // static 会将他挂载到类上  而不是实例上
+  static getInstance(): Emperor {
+    if (!this.emperor) {
+      this.emperor = new Emperor()
     }
-    // static 会将他挂载到类上  而不是实例上
-    static getInstance(): Emperor {
-        if (!this.emperor) {
-            this.emperor = new Emperor();
-        }
-        return this.emperor;
-    }
+    return this.emperor
+  }
 
-    say(): void {
-        console.log(`爱卿平身`);
-    }
+  say(): void {
+    console.log(`爱卿平身`)
+  }
 
-    see(): void {
-        this.count++;
-        console.log(`你是朕见过的第${this.count}个臣子, 退下吧`);
-    }
+  see(): void {
+    this.count++
+    console.log(`你是朕见过的第${this.count}个臣子, 退下吧`)
+  }
 }
 
 class Minister {
-    emperor: Emperor;
-    constructor(private name: string) {
-        // 确定臣子的第一件事就是知道皇帝是谁
-        this.emperor = Emperor.getInstance();
-    }
+  emperor: Emperor
+  constructor(private name: string) {
+    // 确定臣子的第一件事就是知道皇帝是谁
+    this.emperor = Emperor.getInstance()
+  }
 
-    // 面见圣上
-    formalVisit(): void {
-        console.log(`臣 ${this.name},拜见陛下,吾皇万岁万岁万万岁`);
-        this.emperor.say();
-        this.emperor.see();
-    }
+  // 面见圣上
+  formalVisit(): void {
+    console.log(`臣 ${this.name},拜见陛下,吾皇万岁万岁万万岁`)
+    this.emperor.say()
+    this.emperor.see()
+  }
 }
 
-const minister1 = new Minister('王钢蛋');
-const minister2 = new Minister('张铁锤');
-const minister3 = new Minister('赵四');
+const minister1 = new Minister('王钢蛋')
+const minister2 = new Minister('张铁锤')
+const minister3 = new Minister('赵四')
 
-minister1.formalVisit();
-minister3.formalVisit();
-minister2.formalVisit();
+minister1.formalVisit()
+minister3.formalVisit()
+minister2.formalVisit()
 
 // class Singleton {
 //     private static singleton = new Singleton();
