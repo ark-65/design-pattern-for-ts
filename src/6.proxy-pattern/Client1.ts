@@ -35,6 +35,17 @@ namespace ProxyPatternClient1 {
     static main(): void {
       // 定义一个痴迷的玩家
       const player: IGamePlayer = new GamePlayer('张三');
+      // 开始打游戏,记下时间戳
+      console.log('开始时间是: 2022年10月02日22:55:51');
+      player.login('zhangSan', '123456');
+      // 开始杀怪
+      player.killBoss();
+      // 升级
+      player.upgrade();
+      // 记录结束游戏时间
+      console.log('结束时间是: 2022年10月02日22:57:07');
     }
   }
+
+  Client.main();
 }
