@@ -121,3 +121,11 @@ design pattern for typescript
 
 ## [桥梁模式(Bridge Pattern)]()
 
+
+```mermaid
+graph LR
+    A[test] --> B{test2}
+    B -- Yes --> C[test3]
+    B -- No --> D[test4]
+    D --> A
+```
