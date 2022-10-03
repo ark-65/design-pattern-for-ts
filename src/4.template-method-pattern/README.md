@@ -1,4 +1,4 @@
-# 模板方法模式
+# 模板方法模式（Template Method Pattern）
 
 
 
