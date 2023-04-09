@@ -297,7 +297,7 @@ class Client {
 
 原型模式的通用类图：
 
-![image-20230219162910937](../../assets/prototype-pattern/4.png)
+![image-20230219162910937](../../assets/prototype-pattern/main.png)
 
 
 
@@ -356,8 +356,6 @@ class Client {
 ### 原型模式的注意事项
 
 原型模式虽然简单，但是在 TypeScript 中使用还是有一些注意事项的，我们通过几个例子逐个解说。
-
-
 
 #### 构造函数不会被执行
 
