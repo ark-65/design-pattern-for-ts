@@ -39,7 +39,7 @@ design pattern for typescript
 
 ## [建造者模式(Builder Pattern)](./src/5.builder-pattern)
 
->创造类
+> 创造类
 
 ![main](./assets/builder-pattern/main.png)
 
@@ -55,8 +55,13 @@ design pattern for typescript
 
 > Provide a surrogate or placeholder for another object to control access to it. （为其他对象提供一种代理以控制对这个对象的访问）
 
-## [原型模式(Prototype Pattern)]()
+## [原型模式(Prototype Pattern)](./src/7.prototype-pattern)
 
+> 创造类
+
+![main](./assets/prototype-pattern/main.png)
+
+> Specify the kinds of objects to create using a prototypical instance，and create new objects by coping this prototype. （用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。）
 
 
 ## [中介者模式(Mediator Pattern)]()

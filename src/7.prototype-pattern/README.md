@@ -297,7 +297,7 @@ class Client {
 
 原型模式的通用类图：
 
-![image-20230219162910937](../../assets/prototype-pattern/4.png)
+![image-20230219162910937](../../assets/prototype-pattern/main.png)
 
 
 
