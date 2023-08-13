@@ -435,6 +435,26 @@ class Client {
 
 在多个对象以来的情况下，通过加入中介者角色，取消了多个对象的关联或者依赖关系，减少了对象的耦合性。
 
+- 修改后的运行结果
+
+```shell
+初始库存为 : 100
+------------采购人员采购奶粉-----------
+奶粉的销售情况为: 56, 销售状况 不好 *注:良好全量采购,不好半量采购
+采购奶粉 50 桶
+库存数量为: 150
+------------销售人员销售奶粉-----------
+销售奶粉 122 桶
+库存数量为: 28
+------------库房管理人员清库处理-----------
+初始库存为 : 28
+清理存货数量为 28
+折价销售奶粉 28 桶
+不再采购奶粉
+```
+
+
+
 ## 中介者模式的定义
 
 中介者模式的定义为： **Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it let's you vary their interaction independently. （用一个中介对象封装一系列的对象交互，中介者使各对象不需要显式地相互作用，从而使其耦合松散，而且可以独立地改变他们之间的交互。）**
