@@ -115,7 +115,6 @@ namespace Client2 {
     private static MILK_POWDER_NUMBER: number = 100;
 
     constructor(_mediator: AbstractMediator) {
-      console.log(`初始库存为 : ${Stock.MILK_POWDER_NUMBER}`)
       super(_mediator);
     }
 
